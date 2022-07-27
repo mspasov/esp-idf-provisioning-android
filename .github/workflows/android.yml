@@ -24,3 +24,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew provisioning:bundleReleaseAar
+    - uses: actions/upload-artifact@v3
+      with:
+        name: provisioning-release.aar
+        path: provisioning/build/outputs/aar/provisioning-release.aar
